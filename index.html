@@ -1,10 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
-        <meta charset="UTF-8">
-        <title>repository test</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="./css/all.min.css">
+        <link rel="stylesheet" href="./css/style.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>    
     </head>
-<body>
-    <h1>test view</h1>
-</body>
+    <body>
+        <div id="wrap">
+            <header id="header">
+                <div class="ltc">
+                    <div><i class="fab fa-html5"></i></div>
+                    <div>システム名</div>
+                    <div class="page-title">ダッシュボード</div>
+                </div>
+                <div class="rtc">
+                    <div><i class="far fa-bell"></i></div>
+                    <div><i class="fas fa-user"></i></div>
+                </div>
+            </header>
+            <div id="content-wrapper">
+                <div id="navigation">
+                    <nav>
+                        <ul>
+                            <li class="node"><a href="index.html"><i class="fas fa-scroll"></i>ダッシュボード</a></li>
+                            <li class="node"><a href="search.html"><i class="fas fa-search"></i>アセット検索</a></li>
+                            <li class="node"><i class="fas fa-coins"></i>技術アセット管理</li>
+                            <li>
+                                <ul>
+                                    <li class="node"><a href="asset-edit.html"><i class="far fa-plus-square"></i>追加</a></li>
+                                    <li class="node"><a href="asset-list.html"><i class="far fa-edit"></i>編集・削除</a></li>
+                                </ul>
+                            </li>
+                            <li class="node"><i class="fas fa-tools"></i>設定</li>
+                            <li>
+                                <ul>
+                                    <li class="node"><a href="#"><i class="fas fa-user-edit"></i>開発者マスタ</a></li>
+                                    <li class="node"><a href="#"><i class="fas fa-users"></i>開発部マスタ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="contents">
+                    <div id="contents-main">
+                        <section class="ui-alert-note">
+                            <header class="ui-title"><i class="fas fa-exclamation-triangle"></i>アラート</header>
+                            <div class="ui-note">
+                                <ul class="ui-list-row">
+                                    <li class="ui-list-row-item">
+                                        <span class="ui-alert"><a href="#">更新されていないアセットがあります。クリックしてアセット情報を更新してください。</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="ui-single-note">
+                            <header class="ui-title"><i class="fas fa-scroll"></i>お知らせ</header>
+                            <div class="ui-note">
+                                <ul class="ui-list-row">
+                                    <li class="ui-list-row-item">
+                                        <span class="ui-date">2021年07月01日</span>
+                                        <span class="ui-message"><a href="#">[プレスリリース] 「○○○○○○○○○○○○○○」が追加されました。</a></span>
+                                    </li>
+                                    <li class="ui-list-row-item">
+                                        <span class="ui-date">2021年07月01日</span>
+                                        <span class="ui-message"><a href="#">[アセット情報追加] 「○○○○○○○○○○○○○○」が追加されました。</a></span>
+                                    </li>
+                                    <li class="ui-list-row-item">
+                                        <span class="ui-date">2021年07月01日</span>
+                                        <span class="ui-message"><a href="#">[アセット情報更新] 「○○○○○○○○○○○○○○」の情報が更新されました。</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="contents-sub"></div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

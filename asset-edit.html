@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="./css/all.min.css">
+        <link rel="stylesheet" href="./css/style.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <header id="header">
+                <div class="ltc">
+                    <div><i class="fab fa-html5"></i></div>
+                    <div>システム名</div>
+                    <div class="page-title">アセット編集</div>
+                </div>
+                <div class="rtc">
+                    <div><i class="far fa-bell"></i></div>
+                    <div><i class="fas fa-user"></i></div>
+                </div>
+            </header>
+            <div id="content-wrapper">
+                <div id="navigation">
+                    <nav>
+                        <ul>
+                            <li class="node"><a href="index.html"><i class="fas fa-scroll"></i>ダッシュボード</a></li>
+                            <li class="node"><a href="search.html"><i class="fas fa-search"></i>アセット検索</a></li>
+                            <li class="node"><i class="fas fa-coins"></i>技術アセット管理</li>
+                            <li>
+                                <ul>
+                                    <li class="node"><a href="asset-edit.html"><i class="far fa-plus-square"></i>追加</a></li>
+                                    <li class="node"><a href="asset-list.html"><i class="far fa-edit"></i>編集・削除</a></li>
+                                </ul>
+                            </li>
+                            <li class="node"><i class="fas fa-tools"></i>設定</li>
+                            <li>
+                                <ul>
+                                    <li class="node"><a href="#"><i class="fas fa-user-edit"></i>開発者マスタ</a></li>
+                                    <li class="node"><a href="#"><i class="fas fa-users"></i>開発部マスタ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="contents">
+                    <div id="contents-main">
+                        <section class="ui-tabs">
+                            <ul>
+                                <li><a href="#tab-base">技術アセット情報</a></li>
+                                <li><a href="#tab-member">担当者情報</a></li>
+                                <li><a href="#tab-develop">開発情報</a></li>
+                                <li><a href="#tab-poc">PoC情報</a></li>
+                                <li><a href="#tab-patent">特許情報</a></li>
+                            </ul>
+                            <div id="tab-base">
+                                <table class="input-table">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">技術ID</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">アセット名</td>
+                                            <td><input type="text" name="asset-name"></td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3">概要</td>
+                                            <td>本文</td>
+                                            <td><textarea name="asset-description" class="ui-textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>補足画像</td>
+                                            <td><div class="ui-file-drag-handler">ここにドロップしてください。</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>その他添付資料</td>
+                                            <td><div class="ui-file-drag-handler">ここにドロップしてください。</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">技術カテゴリ</td>
+                                            <td>カテゴリ</td>
+                                            <td>
+                                                <button type="button" class="ui-btn ui-btn-primary ui-select-category">カテゴリ一覧</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>タグ</td>
+                                            <td>
+                                                <button type="button" class="ui-btn ui-btn-primary ui-select-tags">タグ一覧</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">開発フェーズ</td>
+                                            <td>
+                                                <select>
+                                                    <option>サービス企画・技術適応研究</option>
+                                                    <option>実用化(施策)・技術検証</option>
+                                                    <option>事業性検証</option>
+                                                    <option>基盤化・基盤整備</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">ステータス</td>
+                                            <td>
+                                                <select>
+                                                    <option>ステータス</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3">今後のロードマップ</td>
+                                            <td>概要</td>
+                                            <td><textarea name="asset-description" class="ui-textarea"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>補足画像</td>
+                                            <td><div class="ui-file-drag-handler">ここにドロップしてください。</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>その他添付資料</td>
+                                            <td><div class="ui-file-drag-handler">ここにドロップしてください。</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="tab-member">
+                                <section class="ui-single-note">
+                                    <header class="ui-title"><i class="far fa-user"></i>現担当者情報</header>
+                                    <div class="ui-note">
+                                        <table class="input-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2">主担当者</td>
+                                                    <td>
+                                                        <button type="button" class="ui-btn ui-btn-primary ui-select-user">開発者一覧</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">担当者1</td>
+                                                    <td>
+                                                        <button type="button" class="ui-btn ui-btn-primary ui-select-user">開発者一覧</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">担当者2</td>
+                                                    <td>
+                                                        <button type="button" class="ui-btn ui-btn-primary ui-select-user">開発者一覧</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                                <button type="button" class="ui-btn ui-btn-primary ui-add-user">担当者欄追加</button>
+
+                                <section class="ui-single-note">
+                                    <header class="ui-title"><i class="fas fa-user-slash"></i>担当者来歴</header>
+                                    <div class="ui-note">
+                                        <table class="input-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>部署 / 氏名</th>
+                                                    <th>開始日</th>
+                                                    <th>終了日</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>XT開発部 〇〇　〇〇</td>
+                                                    <td>2020年07月01日</td>
+                                                    <td>2021年03月31日</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                            </div>
+                            <div id="tab-develop">
+                                <section class="ui-single-note">
+                                    <header class="ui-title"><i class="fas fa-tools"></i>開発内容</header>
+                                    <div class="ui-note">
+                                        <table class="input-table">
+                                            <tr>
+                                                <td>名称</td>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>背景・目的</td>
+                                                <td><textarea name="asset-description" class="ui-textarea"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>開発内容</td>
+                                                <td><textarea name="asset-description" class="ui-textarea"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>補足画像</td>
+                                                <td><div class="ui-file-drag-handler">ここにドロップしてください。</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>その他添付資料</td>
+                                                <td><div class="ui-file-drag-handler">ここにドロップしてください。</div></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </section>
+                                <section class="ui-single-note">
+                                    <header class="ui-title"><i class="fas fa-yen-sign"></i>投資情報</header>
+                                    <div class="ui-note">
+                                        <table class="input-table">
+                                            <tr>
+                                                <td>費用予定総額</td>
+                                                <td>&yen;<input type="text" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td>費用内訳</td>
+                                                <td>
+                                                    <div><span><input type="text">：&yen;<input type="text"></span></div>
+                                                    <button type="button" class="ui-btn ui-btn-primary">内訳欄追加</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>PJCD</td>
+                                                <td><input type="text" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td>費用実績</td>
+                                                <td>&yen;<input type="text" readonly></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </section>
+                            </div>
+                            <div id="tab-poc">
+                                <section class="ui-single-note">
+                                    <header class="ui-title"><i class="far fa-handshake"></i>PoC情報1</header>
+                                    <div class="ui-note">
+                                        <table class="input-table">
+                                            <tr>
+                                                <td>名称</td>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>概要</td>
+                                                <td><textarea name="asset-description" class="ui-textarea"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>社内協力</td>
+                                                <td><button type="button" class="ui-btn ui-btn-primary">事業部一覧</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>社外協力</td>
+                                                <td>
+                                                    <div><input type="text"></div>
+                                                    <button type="button" class="ui-btn ui-btn-primary">社外協力欄追加</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>開始予定</td>
+                                                <td><input type="date"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>終了予定</td>
+                                                <td><input type="date"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>補足画像</td>
+                                                <td><div class="ui-file-drag-handler">ここにドロップしてください。</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>その他添付資料</td>
+                                                <td><div class="ui-file-drag-handler">ここにドロップしてください。</div></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </section>
+                                <button type="button" class="ui-btn ui-btn-primary">PoC情報欄追加</button>
+                            </div>
+                            <div id="tab-patent">
+                                <section class="ui-single-note">
+                                    <header class="ui-title"><i class="fas fa-lock"></i>特許情報1</header>
+                                    <div class="ui-note">
+                                        <table class="input-table">
+                                            <tr>
+                                                <td>名称</td>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>概要本文</td>
+                                                <td><textarea name="asset-description" class="ui-textarea"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>申請日(予定日)</td>
+                                                <td><input type="date"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>取得日(予定日)</td>
+                                                <td><input type="date"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </section>
+                                <button type="button" class="ui-btn ui-btn-primary">特許情報欄追加</button>
+                            </div>
+                        </section>
+                        <section class="ui-btn-wrapper text-center">
+                            <button type="button" class="ui-btn ui-btn-large ui-btn-primary">登録</button>
+                            <button type="button" class="ui-btn ui-btn-large ui-btn-cancel">戻る</button>
+                        </section>
+                    </div>
+                    <div id="contents-sub"></div>
+                </div>
+            </div>
+        </div>
+        <div id="component">
+            <div id="dialog-select-tags" title="タグ選択">
+                <a><i class="fas fa-plus-circle"></i>音声認識</a>
+                <a><i class="fas fa-plus-circle"></i>文字認識</a>
+                <a><i class="fas fa-plus-circle"></i>画像認識</a>
+                <a class="selected"><i class="fas fa-minus-circle"></i>スコアリングAI</a>
+                <a><i class="fas fa-plus-circle"></i>推定AI</a>
+                <a><i class="fas fa-plus-circle"></i>ドローン</a>
+                <a><i class="fas fa-plus-circle"></i>5G</a>
+            </div>
+        </div>
+        <script>
+            $(".ui-tabs").tabs();
+
+            $("[name=search-mode]").on('change',function(){
+                if($(this).val() == '0'){
+                    $(".ui-hidden-control").each(function(){
+                        if(!$(this).hasClass("ui-hidden")){
+                            $(this).addClass("ui-hidden");
+                        }
+                    })
+                }else{
+                    $(".ui-hidden-control").each(function(){
+                        if($(this).hasClass("ui-hidden")){
+                            $(this).removeClass("ui-hidden");
+                        }
+                    })
+                }
+            });
+            $(".ui-select-tags").on('click',function(){
+                $("#dialog-select-tags").dialog({
+                    resizable: false,
+                    height: "auto",
+                    width: 300,
+                    modal: true,
+                    buttons: {
+                        "閉じる": function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
+            })
+            $(".ui-search-result-title").on('click',function(){
+                location.href='./asset-edit.html';
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="./css/all.min.css">
+        <link rel="stylesheet" href="./css/style.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <header id="header">
+                <div class="ltc">
+                    <div><i class="fab fa-html5"></i></div>
+                    <div>システム名</div>
+                    <div class="page-title">アセット編集・削除</div>
+                </div>
+                <div class="rtc">
+                    <div><i class="far fa-bell"></i></div>
+                    <div><i class="fas fa-user"></i></div>
+                </div>
+            </header>
+            <div id="content-wrapper">
+                <div id="navigation">
+                    <nav>
+                        <ul>
+                            <li class="node"><a href="index.html"><i class="fas fa-scroll"></i>ダッシュボード</a></li>
+                            <li class="node"><a href="search.html"><i class="fas fa-search"></i>アセット検索</a></li>
+                            <li class="node"><i class="fas fa-coins"></i>技術アセット管理</li>
+                            <li>
+                                <ul>
+                                    <li class="node"><a href="asset-edit.html"><i class="far fa-plus-square"></i>追加</a></li>
+                                    <li class="node"><a href="asset-list.html"><i class="far fa-edit"></i>編集・削除</a></li>
+                                </ul>
+                            </li>
+                            <li class="node"><i class="fas fa-tools"></i>設定</li>
+                            <li>
+                                <ul>
+                                    <li class="node"><a href="#"><i class="fas fa-user-edit"></i>開発者マスタ</a></li>
+                                    <li class="node"><a href="#"><i class="fas fa-users"></i>開発部マスタ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="contents">
+                    <div id="contents-main">
+                        <section class="ui-single-note ui-search-condition">
+                            <header class="ui-title"><i class="fas fa-search"></i>検索条件</header>
+                            <div class="ui-note ui-form-group">
+                                <div class="ui-btn-wrapper">
+                                    <label>
+                                        <input type="radio" id="search-mode-normal" name="search-mode" class="ui-btn-hidden" value="0" checked>
+                                        <div class="ui-btn-hidden-label">簡易</div>
+                                    </label>
+                                    <label for="search-mode-detail">
+                                        <input type="radio" id="search-mode-detail" name="search-mode" class="ui-btn-hidden" value="1">
+                                        <div class="ui-btn-hidden-label">詳細</div>
+                                    </label>
+                                </div>
+                                <div class="ui-form">
+                                    <span class="ui-key">キーワード</span>
+                                    <span class="ui-val">
+                                        <input type="text" name="search-keyword" class="ui-text">
+                                    </span>
+                                </div>
+                                <div class="ui-form">
+                                    <span class="ui-key">カテゴリー</span>
+                                    <span class="ui-val">
+                                        <select name="search-category" class="ui-select">
+                                            <option></option>
+                                            <option value="AI">AI</option>
+                                            <option value="統計">統計</option>
+                                            <option value="GIS">GIS</option>
+                                            <option value="デバイス">デバイス</option>
+                                            <option value="PF">プラットフォーム</option>
+                                            <option value="自然言語処理">自然言語処理</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="ui-form ui-hidden ui-hidden-control">
+                                    <span class="ui-key">タグ</span>
+                                    <span class="ui-val">
+                                        <div class="ui-tags"><a><i class="fas fa-minus-circle"></i>スコアリングAI</a></div>
+                                        <button type="button" class="ui-btn ui-btn-primary ui-select-tags">タグ一覧</button>
+                                    </span>
+                                </div>
+                                <div class="ui-form ui-hidden ui-hidden-control">
+                                    <span class="ui-key">担当部門</span>
+                                    <span class="ui-val">
+                                        <select name="search-section" class="ui-select">
+                                            <option value=""></option>
+                                            <option value="XT">XT</option>
+                                            <option value="移開部">移開部</option>
+                                            <option value="SI">SI</option>
+                                            <option value="イノ統">イノ統</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="ui-search-result">
+                            <header class="ui-title"><i class="fas fa-list"></i>検索結果</header>
+                            <article class="ui-search-result-item">
+                                <header class="ui-search-result-title"><i class="far fa-edit"></i>A1 【 FinTech 】 ｄ カード審査用スコアモデル</header>
+                                <div class="ui-search-result-content">
+                                    <div class="ui-description">
+                                        ・委託先で行われブラックボックスであるｄカード入会及び途上審査スコアモデルを新たに構築する<br>
+                                        ・金融情報だけでなくケータイ情報を活用しクレジットカード業界にないモデルとする
+                                    </div>
+                                    <div class="ui-category-and-tags">
+                                        <span class="ui-category">AI</span>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <div class="ui-user">
+                                        <span class="ui-timestamp">2021年07月01日 17:45:01 更新</span>
+                                        <span class="ui-section">XT開発部</span>
+                                        <span class="ui-unit">開発1課</span>
+                                        <span class="ui-name">〇〇 〇〇</span>
+                                        <span class="ui-remove">削除</span>
+                                    </div>
+                                </footer>
+                            </article>
+                            <article class="ui-search-result-item">
+                                <header class="ui-search-result-title"><i class="far fa-edit"></i>A1 【 FinTech 】 ｄ カード審査用スコアモデル</header>
+                                <div class="ui-search-result-content">
+                                    <div class="ui-description">
+                                        ・委託先で行われブラックボックスであるｄカード入会及び途上審査スコアモデルを新たに構築する<br>
+                                        ・金融情報だけでなくケータイ情報を活用しクレジットカード業界にないモデルとする
+                                    </div>
+                                    <div class="ui-category-and-tags">
+                                        <span class="ui-category">AI</span>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <div class="ui-user">
+                                        <span class="ui-timestamp">2021年07月01日 17:45:01 更新</span>
+                                        <span class="ui-section">XT開発部</span>
+                                        <span class="ui-unit">開発1課</span>
+                                        <span class="ui-name">〇〇 〇〇</span>
+                                        <span class="ui-remove">削除</span>
+                                    </div>
+                                </footer>
+                            </article>
+                            <article class="ui-search-result-item">
+                                <header class="ui-search-result-title"><i class="far fa-edit"></i>A1 【 FinTech 】 ｄ カード審査用スコアモデル</header>
+                                <div class="ui-search-result-content">
+                                    <div class="ui-description">
+                                        ・委託先で行われブラックボックスであるｄカード入会及び途上審査スコアモデルを新たに構築する<br>
+                                        ・金融情報だけでなくケータイ情報を活用しクレジットカード業界にないモデルとする
+                                    </div>
+                                    <div class="ui-category-and-tags">
+                                        <span class="ui-category">AI</span>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <div class="ui-user">
+                                        <span class="ui-timestamp">2021年07月01日 17:45:01 更新</span>
+                                        <span class="ui-section">XT開発部</span>
+                                        <span class="ui-unit">開発1課</span>
+                                        <span class="ui-name">〇〇 〇〇</span>
+                                        <span class="ui-remove">削除</span>
+                                    </div>
+                                </footer>
+                            </article>
+                            <article class="ui-search-result-item">
+                                <header class="ui-search-result-title"><i class="far fa-edit"></i>A1 【 FinTech 】 ｄ カード審査用スコアモデル</header>
+                                <div class="ui-search-result-content">
+                                    <div class="ui-description">
+                                        ・委託先で行われブラックボックスであるｄカード入会及び途上審査スコアモデルを新たに構築する<br>
+                                        ・金融情報だけでなくケータイ情報を活用しクレジットカード業界にないモデルとする
+                                    </div>
+                                    <div class="ui-category-and-tags">
+                                        <span class="ui-category">AI</span>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <div class="ui-user">
+                                        <span class="ui-timestamp">2021年07月01日 17:45:01 更新</span>
+                                        <span class="ui-section">XT開発部</span>
+                                        <span class="ui-unit">開発1課</span>
+                                        <span class="ui-name">〇〇 〇〇</span>
+                                        <span class="ui-remove">削除</span>
+                                    </div>
+                                </footer>
+                            </article>
+                            <article class="ui-search-result-item">
+                                <header class="ui-search-result-title"><i class="far fa-edit"></i>A1 【 FinTech 】 ｄ カード審査用スコアモデル</header>
+                                <div class="ui-search-result-content">
+                                    <div class="ui-description">
+                                        ・委託先で行われブラックボックスであるｄカード入会及び途上審査スコアモデルを新たに構築する<br>
+                                        ・金融情報だけでなくケータイ情報を活用しクレジットカード業界にないモデルとする
+                                    </div>
+                                    <div class="ui-category-and-tags">
+                                        <span class="ui-category">AI</span>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <div class="ui-user">
+                                        <span class="ui-timestamp">2021年07月01日 17:45:01 更新</span>
+                                        <span class="ui-section">XT開発部</span>
+                                        <span class="ui-unit">開発1課</span>
+                                        <span class="ui-name">〇〇 〇〇</span>
+                                        <span class="ui-remove">削除</span>
+                                    </div>
+                                </footer>
+                            </article>
+                        </section>
+                    </div>
+                    <div id="contents-sub"></div>
+                </div>
+            </div>
+        </div>
+        <div id="component">
+            <div id="dialog-select-tags" title="タグ選択">
+                <a><i class="fas fa-plus-circle"></i>音声認識</a>
+                <a><i class="fas fa-plus-circle"></i>文字認識</a>
+                <a><i class="fas fa-plus-circle"></i>画像認識</a>
+                <a class="selected"><i class="fas fa-minus-circle"></i>スコアリングAI</a>
+                <a><i class="fas fa-plus-circle"></i>推定AI</a>
+                <a><i class="fas fa-plus-circle"></i>ドローン</a>
+                <a><i class="fas fa-plus-circle"></i>5G</a>
+            </div>
+        </div>
+        <script>
+            $("[name=search-mode]").on('change',function(){
+                if($(this).val() == '0'){
+                    $(".ui-hidden-control").each(function(){
+                        if(!$(this).hasClass("ui-hidden")){
+                            $(this).addClass("ui-hidden");
+                        }
+                    })
+                }else{
+                    $(".ui-hidden-control").each(function(){
+                        if($(this).hasClass("ui-hidden")){
+                            $(this).removeClass("ui-hidden");
+                        }
+                    })
+                }
+            });
+            $(".ui-select-tags").on('click',function(){
+                $("#dialog-select-tags").dialog({
+                    resizable: false,
+                    height: "auto",
+                    width: 300,
+                    modal: true,
+                    buttons: {
+                        "閉じる": function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
+            })
+            $(".ui-search-result-title").on('click',function(){
+                location.href='./asset-edit.html';
+            });
+        </script>
+    </body>
+</html>
